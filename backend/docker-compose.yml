@@ -1,0 +1,52 @@
+# -*- coding:utf-8 -*-
+# Copyright (C) 2023  E.SUN BANK.
+# @Author: Hsin-Hsien Ho, Wan-Chu Lin
+# @Date: 2023/01
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+version: '3'
+
+services:
+    frontend:
+        container_name: frontend
+        build: ./frontend
+        volumes:
+          - './frontend:/app'
+          - '/app/node_modules'
+        ports:
+          - '3000:3000'
+        environment:
+          - NODE_ENV=prod
+    backend:
+        container_name: backend
+        build: "backend/."
+        volumes:
+          - "./backend:/code"
+        ports:
+          - "5000:5000"
+        environment:
+          - MODE=prod
+        command: gunicorn -c gunicorn.conf.py --logger-class=app.log_config.UniformLogger app.main:app
+    nginx:
+        container_name: nginx
+        volumes:
+          - "./nginx:/etc/nginx/conf.d"
+          - './nginx:/var/log/nginx/'
+          - './frontend/dist:/home/frontend/dist'
+        build: ./nginx
+        ports:
+          - 80:80
+        depends_on:
+          - backend
+          - frontend

@@ -1,0 +1,34 @@
+# byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# tests and coverage
+*.pytest_cache
+.coverage
+
+# database & logs
+*.db
+*.sqlite3
+*.log
+migrations/
+
+# venv
+env
+venv
+
+# other
+.DS_Store
+
+# sphinx docs 
+_build
+_static
+_templates
+
+# javascript
+.vscode/symbols.json
+
+# python
+*.ipynb_checkpoints
+
+# npm
+node_modules/

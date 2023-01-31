@@ -1,0 +1,200 @@
+/* =======================================================
+    * Name: 玉山投票系統 Voting System
+    * Author: Hsin-Hsien Ho, Wan-Chu Lin
+    * License: 
+    Copyright (C) 2023 E.SUN BANK.
+    This program is free software: you can redistribute it and/or 
+    modify it under the terms of the GNU General Public License as 
+    published by the Free Software Foundation, either version 2.1 
+    of the License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of 
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
+    GNU General Public License for more details.
+    ========================================================
+*/
+.action-btn {
+  display: block;
+  max-width: 180px;
+  width: 100%;
+  background: #00a19b;
+  color: #fff;
+  font-size: 18px;
+  border: 0;
+  padding: 10px;
+  border-radius: 6px;
+  margin: 0 auto;
+}
+.btn {
+  display: inline-block;
+  width: 100%;
+  max-width: 260px;
+  background: #00a19b;
+  color: #fff;
+  font-size: 18px;
+  border: 0;
+  padding: 10px;
+  border-radius: 6px;
+  margin: 6px;
+  text-decoration: none;
+}
+#return-btn {
+  color: #00a19b;
+  background-color: transparent;
+  border: 0;
+  max-width: 100px;
+}
+.btn-secondary {
+  border: 1px solid #00a19b;
+  color: #00a19b;
+  background: #fff;
+}
+.btn-secondary:hover {
+  background-color: #fff !important;
+  color: #00a19b !important;
+  border: 1px solid #00a19b !important;
+}
+.btn-primary:hover {
+  background: #00a19b !important;
+  color: #fff !important;
+}
+#cant-vote {
+  background: #acacac;
+}
+.hyper-link {
+  color: #00a19b;
+  text-decoration: underline;
+}
+.tab {
+  max-width: 200px;
+  width: 100%;
+  margin: 0 8px;
+}
+.router-link-active .tab-btn {
+  background-color: #00a19b;
+  color: #fff;
+  position: relative;
+}
+.router-link-active .tab-btn::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: #00a19b;
+  border-radius: 10px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: -28px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-width: 14px;
+  border-style: solid;
+  border-color: #00a19b transparent transparent transparent;
+  border-radius: 0;
+  margin: 0 auto;
+  background: transparent;
+}
+.tab-btn {
+  display: inline-block;
+  border: 1px solid #00a19b;
+  color: #00a19b;
+  background-color: #fff;
+  border-radius: 4px !important;
+  max-width: 200px;
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+  margin: 0;
+}
+
+.tab-btn:hover {
+  background-color: #fff !important;
+  color: #00a19b !important;
+  border-color: #00a19b !important;
+}
+.router-link-active .tab-btn:hover {
+  background-color: #00a19b !important;
+  color: #fff !important;
+  border-color: #00a19b !important;
+}
+img {
+  margin: 5px;
+  display: block;
+  /* height: 300px; */
+  width: 100%;
+  /* width: 30%; */
+  /* max-width: 33%; */
+  /* height: auto; */
+  object-fit: contain;
+}
+.card {
+  max-width: 400px;
+  border: 1px solid #bde3e2;
+  background-color: #fff;
+  display: inline-block;
+  width: 100%;
+  margin: 3.5em auto 0em;
+  border-radius: 8px;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+.description {
+  font-size: 14px;
+}
+
+#warning {
+  color: red;
+  margin-bottom: 1%;
+  font-size: 10px;
+  font-weight: bold;
+}
+#note-description {
+  font-size: 12px;
+}
+#talent {
+}
+#submit-result-btn {
+  color: black;
+  background-color: rgba(223, 255, 173, 0.411);
+  width: 50%;
+  max-width: 150px;
+  border-radius: 5px;
+  padding: 1%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#cannot-submit-btn {
+  color: black;
+  background-color: rgba(173, 173, 173, 0.411);
+  width: 50%;
+  max-width: 150px;
+  border-radius: 5px;
+  padding: 1%;
+}
+#not-vote {
+  color: red;
+  margin-bottom: 1%;
+  font-weight: bold;
+}
+#vote-string {
+  font-weight: bold;
+}
+@media screen and (max-width: 568px) {
+  .card {
+    max-width: 280px;
+    margin: 2.3em auto 0em;
+  }
+  .tab-btn {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .tab {
+    margin: 0 2px;
+  }
+  .tab-btn {
+    margin: 0;
+  }
+}
